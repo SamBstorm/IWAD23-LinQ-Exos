@@ -44,6 +44,38 @@ namespace ExerciceDeLinq
             {
                 Console.WriteLine(info);
             }*/
+
+            /* 3.1 */
+            /*
+            //var queryResult = dc.Students
+            //    .Where(s => s.BirthDate.Year < 1955)
+            //    .Select(s => new { s.Last_Name, s.Year_Result, Status = (s.Year_Result >= 12)? "Ok" : "KO"});
+
+            var queryResult = from s in dc.Students
+                              where s.BirthDate.Year < 1955
+                              select new { s.Last_Name, s.Year_Result, Status = (s.Year_Result >= 12) ? "Ok" : "KO" };
+
+            foreach (var item in queryResult)
+            {
+                Console.WriteLine($"{item.Last_Name}\t{item.Year_Result}\t{item.Status}");
+            }*/
+
+
+            /* 3.3 */
+            /*
+            //var queryResult = dc.Students
+            //    .Where(s => s.Last_Name.EndsWith('r'))
+            //    .Select(s => new { s.Last_Name, s.Section_ID });
+
+            var queryResult = from s in dc.Students
+                              where s.Last_Name.EndsWith('r')
+                              select new { s.Last_Name, s.Section_ID };
+
+            foreach (var item in queryResult)
+            {
+                Console.WriteLine($"{item.Last_Name} - {item.Section_ID}");
+            }*/
+            
             #endregion
 
             #region Console.ReadLine()
